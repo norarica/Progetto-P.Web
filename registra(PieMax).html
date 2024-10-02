@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    
+    <h1>Registrazione </h1>
+    <p>Inserisci tutti i dati nel campo sottostante </p>
+
+    <form action="action_page.php" autocomplete="on">
+
+        <label for="fname"> Nome:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname"> Cognome:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+
+        <label for="fotoid"> Foto ID</label><br>
+        <input type="file" id="fotoid" name="fotoid"><br>
+
+        <label for="datanascita"> Data di nascita: </label><br>
+        <input type="date" id="datanascita" name="datanascita"><br>
+
+
+        Ambito di interesse: <input type="text" list="interest_list" name="interessi"><br>
+
+            <datalist id="interest_list">
+
+                <option value="cantatnte" >
+                <option value="musicista" >
+                <option value="produttore" >
+                <option value="tecnico del suono" >
+
+             </datalist>
+
+        
+        <input type="checkbox" id="terms-agreement" name="condizioni d'uso"> 
+        <label for="terms-agreement"> Accetto le condizioni di utilizzo del sito</label><br>
+        <input type="submit", value="Submit"><br>
+
+    </form>
+
+
+
+
+</body>
+
+
+</html>
