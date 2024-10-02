@@ -1,139 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<!-- INDEX CONTENT 
- Header with menu
- home
- about 
- services
- servizi disponibili solo per utenti registrati + il bottone per registrarsi
- footer
--->
+<body>
+
+    <table border="0" width="100%" cellpadding="0" cellspacing ="0" bgcolor="#D3D3D3" >
+        <tr>
+            <td>
+                <table border="0" width="100%" cellpadding="15" cellspacing="0" allign="center">
+                    <tr>
+                        <td> <img src = "logo2.png" alt = "Logo" width="75"></td>
+                        <td><b> PNL Sudio </b></td>
+                        <td width=30%>&nbsp;</td>
+                        <td><a href = "index.html"> Home </a></td>
+                        <td><a href = "registra(PieMax).html"> Registrati </a></td>
+                        <td><a href = "visualizza.html"> Prodotti </a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    
+    <h1>Registrazione </h1>
+    <p>Inserisci tutti i dati nel campo sottostante </p>
+
+    <form action="action_page.php" autocomplete="on">
+
+        <label for="fname"> Nome:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+
+        <label for="lname"> Cognome:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="fotoid"> Foto ID</label><br>
+        <input type="file" id="fotoid" name="fotoid"><br><br>
+
+        <label for="datanascita"> Data di nascita: </label><br>
+        <input type="date" id="datanascita" name="datanascita"><br><br>
 
 
-<!------------- Header with menu ------------
- 
-Home, Registrazione/login, I nostri servizi
+        Ambito di interesse: <input type="text" list="interest_list" name="interessi"><br>
 
---------------- Home/about/servizi --------------
- 
-chi siamo/il nostro Team - breve presentazione di ognuno
-lo studio - foto
-cosa facciamo - in breve i servizi che si possono richiedere/comprare
-cosa offre il sito (es. prenotazione di stanze, corsi) 
+            <datalist id="interest_list">
 
---------------- registrati ---------
- 
-registrandoti avrai la possibilità di richieder....
-cosa stai aspettando: (bottone) iscriviti ora o fai il login
+                <option value="Cantante" >
+                <option value="Musicista" >
+                <option value="Produttore" >
+                <option value="Tecnico del suono" >
 
-------------- footer -----------------
-
-numero di telefono 
-mail
-indirizzo 
-social media
-
--->
-
-    <head>
-    <!-- <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> --> 
-        <title> PNL Studio - Home </title>
-        <!-- http-equiv="X-UA-Compatible" content="IE=edge"> -->
+             </datalist>
 
         
-    </head>
-    <body>
+        <br> <input type="checkbox" id="terms-agreement" name="condizioni d'uso"> 
+        <label for="terms-agreement"> Accetto le <a href="">condizioni di utilizzo</a> del sito</label><br><br>
+        <input type="submit", value="Submit"><br>
 
-        <!-------------- MENU ------------------>
+    </form>
 
-        <table border="0" width="100%" cellpadding="0" cellspacing ="0" bgcolor="#D3D3D3" >
-            <tr>
-                <td>
-                    <table border="0" width="100%" cellpadding="15" cellspacing="0" allign="center">
-                        <tr>
-                            <td> <img src = "logo2.png" alt = "Logo" width="75"></td>
-                            <td><b> PNL Sudio </b></td>
-                            <td width=30%>&nbsp;</td>
-                            <td><a href = "index.html"> Home </a></td>
-                            <td><a href = "registra(PieMax).html"> Registrati </a></td>
-                            <td><a href = "visualizza.html"> Prodotti </a></td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
+    <br> 
+    &nbsp; 
 
-        <!---------------------------------------->
+    <table border="0" width="100%" cellpadding="10" cellspacing ="0" bgcolor="#D3D3D3" >
+        <tr>
+            <td>
+                <table border="0" width="100%" cellpadding="0" cellspacing="0" allign="center">
+                    <tr>
+                        <td align="center"><h4>Contatti</h4></td>
+                        <td width=10%>&nbsp;</td>
+                        <td align="center"> tel. 3778746278 </td>
+                        <td align="center"> email: info@pnlstudio.com </td>
+                        <td align="center">Via delle Querce 23, 20235, Milano </td>
 
-        <h1>Studio</h1>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 
-        <h3>Chi siamo</h3>
+</body>
 
-        <ul>
-            <li> <b> Il nostro Team </b></li> 
-            <p> 
-                Pietro > Mixing engeneer [...] <br>
-                Nora > [...] <br>
-                Luca > Producer [...] <br>
-            </p>
-
-            <li> <b> Il nostro Studio</b></li>
-            <p>
-                Il nostro studio è il luogo in cui ci sentiamo più a casa. è composto da [tot] stanze di registrazione, [tot] boots per registrare, 
-                <br> [tot] stanze dedicate al Mix&MAster/all'ascolto, [tot] stanza Dolby Atmos 
-                e 2 aule di medie dimensioni dedicate allo svolgimento di attività e corsi.
-            </p>
-            
-        </ul>
-
-        <h3>I nostri servizi</h3>
-        <p>
-            Ofrriamo la possibilità di <u>affittare stanze</u> per la registrazione, il Mix, il Master o l'ascolto a ore o a giornate. <br>
-            È possibile richiedere la presenza, in queste ore o giornate, di un membro del nostro team per supportarvi nella realizzazione del vostro progetto.  
-        </p>
-        <p>
-            Organizziamo inoltre <u>visite, attività e corsi</u> sia teorici che pratici di Mix, Master, registrazione, utilizzo dell'attrezzatura presente in studio. 
-        </p>
-        <p>
-            Infine, effettuiamo <u>Mix e Master e consulenze</u> su richiesta. 
-        </p>
-
-        <h3>Il nostro sito</h3>
-
-        <p>Registrarsi è gratuito e offre solo vantaggi! <br>
-        <i>Una volta registrato</i>, attraverso questo sito, potrai:</p>
-        <ul>
-            <li>Prenotare stanze, incontri con il nostro Team, corsi e attività</li>
-            <li>Richiedere Mix&Master e consulenze</li>
-        </ul>
-
-        <p><button> <a href="registra(PieMax).html">Registrati qui</a></button></p>
-
-
-        <!----------------- FOOTER ------------------>
-                
-        &nbsp;  <!-- fa spazio -->
-
-        <table border="0" width="100%" cellpadding="10" cellspacing ="0" bgcolor="#D3D3D3" >
-            <tr>
-                <td>
-                    <table border="0" width="100%" cellpadding="0" cellspacing="0" allign="center">
-                        <tr>
-                            <td align="center"><h4>Contatti</h4></td>
-                            <td width=10%>&nbsp;</td>
-                            <td align="center"> tel. 3778746278 </td>
-                            <td align="center"> email: info@pnlstudio.com </td>
-                            <td align="center">Via delle Querce 23, 20235, Milano </td>
-
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <!---------------------------------------->
-        
-    </body>
 
 </html>
