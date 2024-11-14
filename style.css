@@ -52,7 +52,6 @@ body, html {
 }
 
 
-
 /*FOTO TEAM*/
 .team-photo {
   width: 150px; /* Fissa la larghezza */
@@ -130,7 +129,6 @@ text-align: center;
 .menu-item:last-child {
   margin-bottom: 20px; /* Aggiusta il valore secondo le tue esigenze */
 }
-
 
 /* FOOTER */
 footer {
