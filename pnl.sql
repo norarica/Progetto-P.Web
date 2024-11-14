@@ -43,5 +43,5 @@ CREATE TABLE UTENTE(
     foto_profilo VARCHAR(255), --- LA FOTO PROFILO VIENE SALVATA COME URL OVVERO COME INDIRIZZO IN MEMORIA O SERVER---
     datanascita_u DATE NOT NULL,
     interesse VARCHAR(128),
-    bloccato BOOLEAN FALSE, 
+    bloccato BOOLEAN, 
 );

@@ -4,18 +4,20 @@
 <title>Sale</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="style.css">
-
+-->
 </head>
 <body>
 
 
 <!-- Links (sit on top) -->
+<!--
 <div class="w3-row w3-padding w3-black menu-container">
   <div class="w3-col s2">
-    <a href="Tindex.html" class="w3-button w3-block w3-black">HOME</a>
+    <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
   </div>
   <div class="w3-col s2">
     <a href="Tattivita.html" class="w3-button w3-block w3-black">ATTIVITA' e CORSI</a>
@@ -30,17 +32,7 @@
     <a href="Tlogin.html" class="w3-button w3-block w3-black">LOGIN</a>
   </div>
 </div>
-
-<div class="w3-row w3-padding w3-black dropdown">
-  <span>Menu</span>
-  <div class="dropdown-content">
-    <a href="Tindex.html" class="w3-button w3-block w3-black">HOME</a>
-    <a href="Tattivita.html" class="w3-button w3-block w3-black">ATTIVITA' e CORSI</a>
-    <a href="Tsale.html" class="w3-button w3-block w3-black">SALE</a>
-    <a href="Ttariffe.html" class="w3-button w3-block w3-black">TARIFFE</a>
-    <a href="Tlogin.html" class="w3-button w3-block w3-black">LOGIN</a>
-  </div>
-</div>
+-->
 
 
 
@@ -48,6 +40,7 @@
 
 
 <!-- Header with image -->
+ <!--
 <header class="bgimg w3-display-container w3-grayscale-min" id="home">
   <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
     <span class="w3-tag">Aperto dalle 7 alle 17</span>
@@ -59,9 +52,22 @@
     <span class="w3-text-white">Via delle Querce 23, 20235, Milano</span>
   </div>
 </header>
-
+-->
 <!-- Add a background color and large text to the whole page -->
-<div class="w3-sand w3-grayscale w3-large">
+<!--<div class="w3-sand w3-grayscale w3-large"> -->
+
+<div id="navbar"></div>
+<script>
+    fetch('navbar.html')
+        .then(response => {
+            if (!response.ok) throw new Error("Errore nel caricamento della navbar.");
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error(error));
+</script>
 
 <!--Menu container--> 
 <div class="w3-container" id="menu">
