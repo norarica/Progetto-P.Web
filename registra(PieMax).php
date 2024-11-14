@@ -1,17 +1,16 @@
+<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php/"; ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>PNL - Registrazione</title>
+    <?php include($IPATH."allstyle.html"); ?>
 </head>
 <body>
 <!-------------- MENU ------------------>
-        <img src = "logo2.png" alt = "Logo" width="75">
-                   
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="registra.html">Registrati</a></li>
-            <li><a href="visualizza.html">i nostri prodotti</a></li> 
-        </ul>
+    
+    <?php include($IPATH."navbar.html"); ?>
                             
 <!--------------------------------------->
     
