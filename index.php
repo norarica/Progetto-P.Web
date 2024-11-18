@@ -1,10 +1,13 @@
-<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php/"; ?>
+<?php 
+  $IPATH = "assets/php/";
+  include('session.php');
+?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Sale</title>
+<title>Home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,7 +17,12 @@
 <body>
 
 
-  <?php include($IPATH."navbar.html"); ?>
+<?php include($IPATH."navbar.html"); ?>
+<?php
+  if(isset($login_session)){
+    echo("Utente: " . $_SESSION['login_user']);
+  }
+?>
 
 <!-- About Container -->
 <div class="w3-container">

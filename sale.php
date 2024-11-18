@@ -1,4 +1,7 @@
-<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php/"; ?>
+<?php 
+  $IPATH = "assets/php/";
+  include('session.php');
+?>
 
 
 <!DOCTYPE html>

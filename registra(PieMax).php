@@ -1,4 +1,6 @@
-<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php/"; ?>
+<?php 
+    $IPATH = "assets/php/"; 
+?>
 
 
 <!DOCTYPE html>
