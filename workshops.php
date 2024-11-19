@@ -17,7 +17,7 @@
 <body>
 
 
-  <?php include($IPATH."navbar.html"); ?>
+  <?php include($IPATH."navbar.php"); ?>
 
 
 <footer class="w3-center w3-large footer">

@@ -48,7 +48,7 @@
 <body>
 
 
-  <?php include($IPATH."navbar.html"); ?>
+  <?php include($IPATH."navbar.php"); ?>
 
 
 <!-- Registra Container -->

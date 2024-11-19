@@ -17,10 +17,11 @@
 <body>
 
 
-<?php include($IPATH."navbar.html"); ?>
+<?php include($IPATH."navbar.php"); ?>
 <?php
   if(isset($login_session)){
     echo("Utente: " . $_SESSION['login_user']);
+    echo("Nome utente".$login_username);
     if(isset($adminbool)){
       echo("<br>Utente admin.");
     }
