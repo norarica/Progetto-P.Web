@@ -23,7 +23,22 @@
        $_SESSION['login_user'] = $email;
        header("location: index.php");
     } else {
-       $error = "Email or password invalid! Please try again!";
+      //check admin
+      $sql = "SELECT * FROM admin WHERE email_a = '$email' and password_hash_a = '$pw'";
+
+      $result = mysqli_query($db,$sql);      
+      $row_admin = mysqli_num_rows($result);      
+      $count_admin = mysqli_num_rows($result);
+
+      if($count_admin == 1) {
+        //logg
+        $_SESSION['login_user'] = $email;
+        $_SESSION['admin_bool'] = true;
+
+        header("location: index.php");
+      }else {
+        $error = "Email or password invalid! Please try again!";
+      }
     }
   }
 ?>

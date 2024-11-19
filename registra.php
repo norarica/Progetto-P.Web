@@ -65,7 +65,7 @@
       <p><input class="w3-input w3-padding-16 w3-border" type="password" name="password" placeholder="Password" required name="Password"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" name="nome" placeholder="Nome" required name="Nome"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" name="cognome" placeholder="Cognome" required name="Cognome"></p>
-      <p><input class="w3-input w3-padding-16 w3-border" type="date-local" name="birthdate" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="date-local" name="birthdate" required name="date" value="YYYY-MM-DD"></p>
       <p><input class="w3-input w3-padding-16 w3-border" type="text" name="interessi" placeholder="Due righe su di te e i tuoi interessi..." required name="interessi"></p>
       <p><input class="w3-button w3-black" type="submit" value="continua"/>
     </form>

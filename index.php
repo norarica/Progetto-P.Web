@@ -21,6 +21,9 @@
 <?php
   if(isset($login_session)){
     echo("Utente: " . $_SESSION['login_user']);
+    if(isset($adminbool)){
+      echo("<br>Utente admin.");
+    }
   }
 ?>
 

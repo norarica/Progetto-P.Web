@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Nov 18, 2024 alle 15:33
+-- Creato il: Nov 19, 2024 alle 10:44
 -- Versione del server: 10.4.32-MariaDB
 -- Versione PHP: 8.2.12
 
@@ -34,6 +34,13 @@ CREATE TABLE `admin` (
   `Nome_a` varchar(100) NOT NULL,
   `Cognome_a` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `admin`
+--
+
+INSERT INTO `admin` (`Admin_cf`, `Email_a`, `Password_hash_a`, `Nome_a`, `Cognome_a`) VALUES
+('GCMSLRRS', 'admin@gmail.com', 'root', 'Admin', 'Supremo');
 
 -- --------------------------------------------------------
 
@@ -91,6 +98,17 @@ CREATE TABLE `utente` (
   `Interesse` varchar(128) DEFAULT NULL,
   `Bloccato` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `utente`
+--
+
+INSERT INTO `utente` (`Utente_cf`, `Email_u`, `Password_hash_u`, `Nome`, `Cognome`, `Datanascita_u`, `Interesse`, `Bloccato`) VALUES
+('', 'l.cacca@cacca.com', '12345', 'Cacca', 'Luca', '2024-11-20', 'kwmdkwkdkwd', NULL),
+('EIFHDHSJEJR7438G', 'l.giaco03@gmail.com', '1234', 'Luca', 'Giacomelli', '0000-00-00', 'wwdkwdjwdjwd', NULL),
+('fawfawfwf', 'l.giaco02@gmail.com', '1234', 'Luca', 'Giacomelli', '2003-06-19', 'wdwd', 0),
+('GDCJSKEK', 'ziopero@gmammolo.it', 'caccapipi', 'Cacca', 'Genitt', '2020-11-16', 'Sono down', 0),
+('wdwd', 'l.cacca@caccwa.com', '12345', 'Cacca', 'Luca', '2024-11-20', 'kwmdkwkdkwd', 0);
 
 -- --------------------------------------------------------
 
