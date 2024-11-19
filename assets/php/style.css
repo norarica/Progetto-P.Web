@@ -1,0 +1,163 @@
+/* GENERALI per tutte le pagine*/
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://architetturesonorebra.com/wp-content/uploads/2019/10/studiodiregistrazione-3.jpg?w=1024");
+  min-height: 75%;
+}
+
+/*titolo principale*/
+
+.titolo-principale{
+  font-size:90px;
+}
+
+/* navbar */
+.navbar {
+  display: none;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 8%;
+  margin-left: 0%;
+}
+
+/* navbar dropdown */
+.dropdown-navbar {
+  display: none; /* Nasconde il menu a tendina di default */
+}
+
+@media (max-width: 500px) {
+  .navbar-container {
+    display: none; /* Nasconde il menu originale su schermi piccoli */
+    }
+
+  .dropdown-navbar {
+    width: 100%;
+    height: 7%;
+    display: inline-block; /* Mostra il menu a tendina su schermi piccoli */
+  }
+}
+
+.dropdown-navbar-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  padding: 5px 5px;
+  z-index: 1;
+}
+
+.dropdown-navbar:hover .dropdown-navbar-content {
+  display: block;
+}
+
+/* gestione titoli neri */
+.titolo {
+  text-align: center;
+    padding-top: 32px; /* O riduci ulteriormente se necessario */
+    padding-bottom: 10px;
+  }
+  
+  #team-padding .titolo { /* Aumentiamo il padding-bottom per 'IL NOSTRO TEAM' */
+    padding-bottom: 24px;  
+  }
+
+/*gestione contenuto containers (larghezza)*/
+.w3-content{
+  max-width:700px;
+}
+
+/*footer*/
+.footer{
+  background-color: #e6ccb3; 
+  padding-top: 1px; 
+  padding-bottom: 1px; 
+  margin-bottom: 50px;
+}
+
+
+/*------------------------------------------------------*/
+/*FOTO TEAM (index)*/
+.team-photo {
+  width: 150px; /* Fissa la larghezza */
+  height: 150px; /* Fissa l'altezza per creare un cerchio uniforme */
+  object-fit: cover; /* Taglia e centra l'immagine */
+  border-radius: 50%; /* Crea un cerchio perfetto */
+  display: block;
+  margin: 0 auto; /* Centra l'immagine all'interno del div */
+}
+
+.reg-button{
+  padding: 20px; padding-bottom: 35px; margin-top: 10%;
+}
+
+/*------------------------------------------------------*/
+/* MENU (sale) */
+/* categoria menu (selezionabile) */
+.tablink {
+  font-size: 18px; /* Aumenta la dimensione del font */
+  padding: 8px; /* Aumenta il padding per rendere le caselle più grandi */
+  background-color: #f1f1f1;
+}
+
+/* elementi interni del menu*/
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+  padding-top: 4px;
+
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.non-clickable {
+  background-color: #e6ccb3;/*oppure #d0a5a5 ?*/ /* Sostituisci con il colore di sfondo desiderato */
+  padding-left: 10px; /* Aggiungi padding se necessario */
+}
+
+/* fai in modo che sembri cliccabile (grigio) */
+.menu-item:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Rimuovi la sottolineatura dai link */
+.menu-item a {
+  text-decoration: none;
+  color: inherit; /* Mantiene il colore del testo */
+}
+
+.menu-item a:hover {
+  text-decoration: none; /* Assicura che non ci sia sottolineatura anche al passaggio del mouse */
+}
+
+/* Aggiungi margine superiore al primo elemento */
+.menu-item:first-child {
+  margin-top: 0px; /* Aggiusta il valore secondo le tue esigenze*/
+}
+
+/* Aggiungi margine inferiore all'ultimo elemento */
+.menu-item:last-child {
+  margin-bottom: 20px; /* Aggiusta il valore secondo le tue esigenze */
+}
+
+
+/*------------------------------------------------------*/
+/* FOOTER */
+footer {
+  margin-top: 39px; /* Aggiungi un margine superiore */
+}
