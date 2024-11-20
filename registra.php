@@ -1,36 +1,14 @@
 <?php 
   $IPATH = "assets/php/"; 
   include($IPATH."config.php");
+  include($IPATH . "auth.php");
 
   session_start();
   $error = '';
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    //dal form...
-    $cf = mysqli_real_escape_string($db, $_POST['cf']);
-    $email = mysqli_real_escape_string($db,$_POST['email']);
-    $pw = mysqli_real_escape_string($db,$_POST['password']);
-    $nome = mysqli_real_escape_string($db, $_POST['nome']);
-    $cognome = mysqli_real_escape_string($db, $_POST['cognome']);
-    $birthdate = mysqli_real_escape_string($db, $_POST['birthdate']);
-    $interessi = mysqli_real_escape_string($db, $_POST['interessi']);
-
-    //query di check
-    $sql = "INSERT INTO `utente` (`Utente_cf`, `Email_u`, `Password_hash_u`, `Nome`, `Cognome`, `Datanascita_u`, `Interesse`, `Bloccato`) VALUES ('$cf', '$email', '$pw', '$nome', '$cognome', '$birthdate', '$interessi', false);";
-    $result = mysqli_query($db,$sql);
-
-    $sql_check = "SELECT * FROM utente WHERE email_u = '$email' and password_hash_u = '$pw'";
-    $result_check = mysqli_query($db,$sql_check);           
-    $count_check = mysqli_num_rows($result_check);
-
-    if($count_check == 1) {
-      //logg
-       $_SESSION['login_user'] = $email;
-       header("location: index.php");
-    } else {
-       $error = "Error";
-    }
+    auth_reg($db, $_POST);
+    
   }
 ?>
 

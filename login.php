@@ -1,48 +1,10 @@
 <?php 
   $IPATH = "assets/php/";
-
-  include($IPATH. "config.php");
-  session_start();
-  $error = '';
+  include($IPATH . "auth.php");
+  include($IPATH . "config.php");
 
   if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-    //dal form...
-    $email = mysqli_real_escape_string($db,$_POST['email']);
-    $pw = mysqli_real_escape_string($db,$_POST['password']);
-
-    //query di check
-    $sql = "SELECT * FROM utente WHERE email_u = '$email' and password_hash_u = '$pw'";
-
-    $result = mysqli_query($db,$sql);      
-    $row = mysqli_fetch_assoc($result);    
-    $count = mysqli_num_rows($result);
-
-    if($count == 1) {
-      //logg
-       $_SESSION['login_user'] = $email;
-       $_SESSION['login_name'] = $row['Nome'];
-       $_SESSION['admin_bool'] = false;
-       header("location: index.php");
-    } else {
-      //check admin
-      $sql = "SELECT * FROM admin WHERE email_a = '$email' and password_hash_a = '$pw'";
-
-      $result = mysqli_query($db,$sql);      
-      $row_admin = mysqli_fetch_assoc($result);      
-      $count_admin = mysqli_num_rows($result);
-
-      if($count_admin == 1) {
-        //logg
-        $_SESSION['login_user'] = $email;
-        $_SESSION['login_name'] = $row_admin['Nome'];
-        $_SESSION['admin_bool'] = true;
-
-        header("location: index.php");
-      }else {
-        $error = "Email or password invalid! Please try again!";
-      }
-    }
+    auth_log($db,$_POST['email'], $_POST['password']);
   }
 ?>
 

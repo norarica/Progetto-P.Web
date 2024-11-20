@@ -21,8 +21,8 @@
 <?php
   if(isset($login_session)){
     echo("Utente: " . $_SESSION['login_user']);
-    echo("Nome utente".$login_username);
-    if(isset($adminbool)){
+    echo("Nome utente". $login_username);
+    if(isset($adminbool) && $adminbool){
       echo("<br>Utente admin.");
     }
   }

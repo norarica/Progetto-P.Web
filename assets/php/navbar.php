@@ -24,11 +24,11 @@
         ?>
     </a>
   </div>
-          <?php if($adminbool):    ?>
-              <div class="w3-col s2">
-                <a href="visualizza.php" class="w3-button w3-block w3-black">GESTIONE UTENTI</a>
-              </div>
-          <?php endif;  ?>
+  <?php if(isset($adminbool) && $adminbool):?>
+      <div class="w3-col s2">
+        <a href="admin.php" class="w3-button w3-block w3-black">GESTIONE UTENTI</a>
+      </div>
+  <?php endif;  ?>
 </div>
 
 <div class="w3-row w3-padding w3-black dropdown-navbar">
@@ -49,9 +49,11 @@
         ?>
 
     </a>
-            <?php if($adminbool):    ?>
-              <a href="visulizza.php" class="w3-button w3-block w3-black">GESTIONE UTENTI</a>
-            <?php endif;    ?>
+    <?php if(isset($adminbool) && $adminbool):?>
+      <div class="w3-col s2">
+        <a href="admin.php" class="w3-button w3-block w3-black">GESTIONE UTENTI</a>
+      </div>
+    <?php endif;  ?>
   </div>
 </div>
 

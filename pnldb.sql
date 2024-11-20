@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Creato il: Nov 20, 2024 alle 12:08
--- Versione del server: 8.0.35
--- Versione PHP: 8.2.20
+-- Host: 127.0.0.1
+-- Creato il: Nov 20, 2024 alle 15:12
+-- Versione del server: 10.4.32-MariaDB
+-- Versione PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `Admin_cf` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
-  `Email_a` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Password_hash_a` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Nome` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Cognome` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Admin_cf` varchar(16) NOT NULL,
+  `Email_a` varchar(50) NOT NULL,
+  `Password_hash_a` varchar(255) NOT NULL,
+  `Nome` varchar(100) DEFAULT NULL,
+  `Cognome` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -49,9 +49,9 @@ INSERT INTO `admin` (`Admin_cf`, `Email_a`, `Password_hash_a`, `Nome`, `Cognome`
 --
 
 CREATE TABLE `carrello` (
-  `Id_prod` int NOT NULL,
-  `Utente_cf` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
-  `Quantità` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Id_prod` int(11) NOT NULL,
+  `Utente_cf` varchar(16) NOT NULL,
+  `Quantità` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -61,9 +61,9 @@ CREATE TABLE `carrello` (
 --
 
 CREATE TABLE `modifica` (
-  `Id_prod` int NOT NULL,
-  `Admin_cf` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
-  `Tipo` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Id_prod` int(11) NOT NULL,
+  `Admin_cf` varchar(16) NOT NULL,
+  `Tipo` varchar(100) DEFAULT NULL,
   `Data_modifica` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -74,12 +74,12 @@ CREATE TABLE `modifica` (
 --
 
 CREATE TABLE `prodotto` (
-  `Id_prod` int NOT NULL,
-  `Categoria` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Descrizione` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
-  `Dimensione` int DEFAULT NULL,
+  `Id_prod` int(11) NOT NULL,
+  `Categoria` varchar(50) NOT NULL,
+  `Descrizione` varchar(200) NOT NULL,
+  `Dimensione` int(11) DEFAULT NULL,
   `Prezzo` decimal(7,2) NOT NULL,
-  `Classe` varchar(10) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Classe` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -89,28 +89,33 @@ CREATE TABLE `prodotto` (
 --
 
 CREATE TABLE `utente` (
-  `Utente_cf` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
-  `Email_u` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Password_hash_u` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Nome` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `Cognome` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
+  `Utente_cf` varchar(16) NOT NULL,
+  `Email_u` varchar(50) NOT NULL,
+  `Password_hash_u` varchar(255) NOT NULL,
+  `Nome` varchar(32) NOT NULL,
+  `Cognome` varchar(32) NOT NULL,
   `Datanascita_u` date NOT NULL,
-  `Interesse` varchar(128) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Bloccato` tinyint(1) DEFAULT NULL
+  `Interesse` varchar(128) DEFAULT NULL,
+  `Bloccato` tinyint(1) DEFAULT NULL,
+  `approvato` varchar(16) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `utente`
 --
 
-INSERT INTO `utente` (`Utente_cf`, `Email_u`, `Password_hash_u`, `Nome`, `Cognome`, `Datanascita_u`, `Interesse`, `Bloccato`) VALUES
-('', 'l.cacca@cacca.com', '12345', 'Cacca', 'Luca', '2024-11-20', 'kwmdkwkdkwd', NULL),
-('EIFHDHSJEJR7438G', 'l.giaco03@gmail.com', '1234', 'Luca', 'Giacomelli', '0000-00-00', 'wwdkwdjwdjwd', NULL),
-('fawfawfwf', 'l.giaco02@gmail.com', '1234', 'Luca', 'Giacomelli', '2003-06-19', 'wdwd', 0),
-('GDCJSKEK', 'ziopero@gmammolo.it', 'caccapipi', 'Cacca', 'Genitt', '2020-11-16', 'Sono down', 0),
-('mssprl01e24c573d', 'piemassa01@gmail.com', '12345', 'pietro luigi maria ', 'massaro', '2001-05-24', 'asfnoasncop', 0),
-('RCGNRO04T68A052L', 'nora.famiglia@gmail.com', '123', 'Nora', 'Ricagni', '2004-12-28', 'ciaooo', 0),
-('wdwd', 'l.cacca@caccwa.com', '12345', 'Cacca', 'Luca', '2024-11-20', 'kwmdkwkdkwd', 0);
+INSERT INTO `utente` (`Utente_cf`, `Email_u`, `Password_hash_u`, `Nome`, `Cognome`, `Datanascita_u`, `Interesse`, `Bloccato`, `approvato`) VALUES
+('', 'l.cacca@cacca.com', '12345', 'Cacca', 'Luca', '2024-11-20', 'kwmdkwkdkwd', NULL, NULL),
+('aaefaf', 'cacca@gmail.com', 'afasf', 'agadg', 'adgadg', '2024-05-21', 'awad', 0, NULL),
+('afafasf', 'asfaf@gmail.com', 'afdaf', 'afafd', 'adfaf', '2020-06-02', 'afa', 0, NULL),
+('asfasf', 'afafs@cacca.it', 'awdawd', 'awfwaf', 'afsaf', '2020-07-03', 'qascdas', 0, NULL),
+('awdawdaeef', 'l.cacca@gmamma.com', '123', '123', '123', '2024-06-02', 'awdwd', 0, NULL),
+('EIFHDHSJEJR7438G', 'l.giaco03@gmail.com', '1234', 'Luca', 'Giacomelli', '0000-00-00', 'wwdkwdjwdjwd', NULL, 'GCMSLRRS'),
+('fawfawfwf', 'l.giaco02@gmail.com', '1234', 'Luca', 'Giacomelli', '2003-06-19', 'wdwd', 0, NULL),
+('GDCJSKEK', 'ziopero@gmammolo.it', 'caccapipi', 'Cacca', 'Genitt', '2020-11-16', 'Sono down', 0, NULL),
+('mssprl01e24c573d', 'piemassa01@gmail.com', '12345', 'pietro luigi maria ', 'massaro', '2001-05-24', 'asfnoasncop', 0, NULL),
+('RCGNRO04T68A052L', 'nora.famiglia@gmail.com', '123', 'Nora', 'Ricagni', '2004-12-28', 'ciaooo', 0, NULL),
+('wdwd', 'l.cacca@caccwa.com', '12345', 'Cacca', 'Luca', '2024-11-20', 'kwmdkwkdkwd', 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -119,10 +124,10 @@ INSERT INTO `utente` (`Utente_cf`, `Email_u`, `Password_hash_u`, `Nome`, `Cognom
 --
 
 CREATE TABLE `utenti_el` (
-  `Utente_cf` varchar(16) COLLATE utf8mb4_general_ci NOT NULL,
+  `Utente_cf` varchar(16) NOT NULL,
   `DataEl` date NOT NULL,
-  `Nome` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `Cognome` varchar(32) COLLATE utf8mb4_general_ci NOT NULL
+  `Nome` varchar(32) NOT NULL,
+  `Cognome` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -161,7 +166,8 @@ ALTER TABLE `prodotto`
 --
 ALTER TABLE `utente`
   ADD PRIMARY KEY (`Utente_cf`),
-  ADD UNIQUE KEY `Email_u` (`Email_u`);
+  ADD UNIQUE KEY `Email_u` (`Email_u`),
+  ADD KEY `fk_approvato` (`approvato`);
 
 --
 -- Indici per le tabelle `utenti_el`
@@ -186,6 +192,12 @@ ALTER TABLE `carrello`
 ALTER TABLE `modifica`
   ADD CONSTRAINT `fk_ADMIN` FOREIGN KEY (`Admin_cf`) REFERENCES `admin` (`Admin_cf`) ON DELETE CASCADE,
   ADD CONSTRAINT `fk_PRODOTTO` FOREIGN KEY (`Id_prod`) REFERENCES `prodotto` (`Id_prod`) ON DELETE CASCADE;
+
+--
+-- Limiti per la tabella `utente`
+--
+ALTER TABLE `utente`
+  ADD CONSTRAINT `fk_approvato` FOREIGN KEY (`approvato`) REFERENCES `admin` (`Admin_cf`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
