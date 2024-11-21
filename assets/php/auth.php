@@ -33,6 +33,7 @@
                 //logg
                 $_SESSION['login_user'] = $email;
                 $_SESSION['login_name'] = $row_admin['Nome'];
+                $_SESSION['login_admin_cf'] = $row_admin['Admin_cf'];
                 $_SESSION['admin_bool'] = true;
 
                 header("location: index.php");

@@ -37,7 +37,6 @@
                             <p>George Elliot (Mary Ann Evans)</p>
                           </div>
                        
-                        <!--<a class="btn btn-light btn-xl" href="#services">Get Started!</a>-->
                     </div>
                 </div>
             </div>
@@ -45,7 +44,7 @@
 
         <!-- The Team -->
 
- <section class="page-section bg-dark text-white id="about">
+ <section class="page-section bg-dark text-white id='about'>
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8 text-center">

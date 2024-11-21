@@ -53,22 +53,23 @@
                         </div>
                         <div class="col-lg-8 align-self-baseline">
                             <!--<p class="text-white-75 mb-5">Scopri chi siamo</p>-->
-                            <input class="btn btn-primary btn-xl fs-2m py-3" type="Submit" value="Invia" method="post" href="#login_section"/>
+                            <input class="btn btn-primary btn-xl fs-2m py-3" type="Submit" value="Invia" method="post"/>
                         </div>
                     </div>
                 </form>
             </div>
         </section>
         <!-- Call to action-->
-        <section class="page-section bg-black text-white">
+        <section class="page-section bg-dark text-white">
             <div class="container px-4 px-lg-5 text-center">
                 <h2 class="mb-4">Registrati senza impegno</h2>
                 <h6 class="text-white font-weight-bold piccolo">Registrarsi è gratuito e offre solo vantaggi!</h6>
                 <p class="text-white-75 mb-4"><i> Una volta registrato</i>, potrai: 
                 <br>• Prenotare i studi di registrazione, sale prova, workshops 
-	<           br>• Richiedere Mix&Master</p>
-                
+                <br>• Richiedere Mix&Master</p>
+                <a class="btn btn-light btn-xl" href="registra.php">Clicca qui per registrarti</a>
             </div>
+    </section>
 
         </section>
         <!-- Footer-->
