@@ -1,5 +1,5 @@
 
-      <?php 
+<?php 
             include("assets/php/allstyle.html");
       ?>
        
@@ -15,7 +15,12 @@
                         <li class="nav-item"><a class="nav-link" href="workshop.php">Workshops</a></li>
                     <!--<li class="nav-item"><a class="nav-link" href="#contact">Tariffe</a></li>-->
                         <li class="nav-item"><a class="nav-link" href="prenota.php">Prenota</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.php"> <?php echo(isset($login_session) ? $login_username : "Login")  ?></a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.php"> <?php echo(isset($login_session) ? $login_username : "Login") ?></a></li>
+                        <?php 
+                            if(isset($adminbool) && $adminbool){ 
+                                echo("<li class='nav-item'><a class='nav-link' href='gestione_utenti.php'>Gestione utenti</a></li>");
+                            }
+                        ?>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-translucent nav-link btn-responsive d-none d-md-block ms-4" type="submit">
