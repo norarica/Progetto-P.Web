@@ -18,11 +18,33 @@
                         <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-otuline-light" type="submit">
+
+
+
+                    <button class="btn btn-outline-light btn-responsive d-none d-md-block ms-4" type="submit">
+                        <i class="bi-cart-fill me-1 text-white"></i>
+                        <span class="text-white">Cart</span>
+                        <span class="badge bg-white text-dark ms-1 rounded-pill">0</span>
+                    </button>
+                    <!-- quando è collassato -->
+                    <button class="btn btn-outline-dark btn-responsive d-block d-md-none " type="submit">
+                        <i class="bi-cart-fill me-1 "></i>
+                        <span class="text- white">Cart</span>
+                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+
+
+
+                        <!--
+                        <button class="btn btn-outline-light btn-responsive d-none d-md-block mx-4" type="submit">
                             <i class="bi-cart-fill me-1 text-white" ></i>
                             <span class = "text-white" >Cart</span>
                             <span class="badge bg-white text-dark ms-1 rounded-pill">0</span>
                         </button>
+                        -->
+
+
+
                     </form>
                 </div>
             </div>
@@ -33,7 +55,7 @@
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
                         <h6 class="text-white font-weight-bold piccolo">PNL Studio</h6>
-                        <h1 class="text-white font-weight-bold grande">Home</h1>
+                        <h1 class="text-white font-weight-bold grande"><?php echo $nomepagina?></h1>
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">

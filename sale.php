@@ -1,3 +1,8 @@
+<?php 
+    $IPATH = $_SERVER["DOCUMENT_ROOT"]; 
+    $nomepagina = "Sale";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,59 +10,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>PNL - Sale</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap Icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
+        <title>PNL - <?php echo $nomepagina; ?></title>
+
+
+        <?php 
+            include($IPATH . "/assets/php/allstyle.html");
+        ?>
+
+
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sale.php">Sale</a></li>
-                        <li class="nav-item"><a class="nav-link" href="workshop.php">Workshops</a></li>
-                    <!--<li class="nav-item"><a class="nav-link" href="#contact">Tariffe</a></li>-->
-                        <li class="nav-item"><a class="nav-link" href="prenota.php">Prenota</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
-                    </ul>
-                    <form class="d-flex" style="margin-left: 3%">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead">
-            <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h6 class="text-white font-weight-bold piccolo">PNL Studio</h6>
-                        <h1 class="text-white font-weight-bold grande">Sale</h1>
-                        <hr class="divider" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Esplora le nostre Sale, se ce n'è una che ti ispira puoi prenotarla!</p>
-                        <a class="btn btn-primary btn-xl" href="prenota.php">Prenota</a>
-                    </div>
-                </div>
-            </div>
+
+
+        <!--importo la navbar-->
+        <?php include($IPATH . "/assets/php/navbar.php");?>
+
+
         </header>
 
         <!-- Portfolio-->
