@@ -1,6 +1,6 @@
-      <?php $IPATH = $_SERVER["DOCUMENT_ROOT"]; ?>
+
       <?php 
-            include($IPATH . "/assets/php/allstyle.html");
+            include("assets/php/allstyle.html");
       ?>
        
        <!-- Navigation-->
