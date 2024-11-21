@@ -1,6 +1,6 @@
-<?php 
-    $IPATH = $_SERVER["DOCUMENT_ROOT"]; 
+<?php  
     $nomepagina = "Home";
+    include('assets/php/session.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,14 +13,14 @@
         <title>PNL - <?php echo $nomepagina; ?></title>
         
         <?php 
-            include($IPATH . "/assets/php/allstyle.html");
+            include("assets/php/allstyle.html");
         ?>
 
     </head>
     <body id="page-top">
 
         <!--importo la navbar-->
-        <?php include($IPATH . "/assets/php/navbar.php");?>
+        <?php include("assets/php/navbar.php");?>
 
         <!-- About-->
 
@@ -142,33 +142,8 @@
             </div>
 
     </section>
-    
-    <!--<section>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
-                    </div>
-                </div>
-        </section>
-    -->
-
-        <!-- Footer-->
-        <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5">
-                <div class="small text-center text-muted"> 
-                    Contatti: <br>
-                    <strong>Email:</strong> info@pnlstudio.com <br>
-                    <strong>Telefono:</strong> +39 02 1234567
-                </div>
-            </div>
-        </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- SimpleLightbox plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <?php 
+        include("assets/php/footer.php");
+    ?>
     </body>
 </html>

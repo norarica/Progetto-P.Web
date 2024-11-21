@@ -15,36 +15,20 @@
                         <li class="nav-item"><a class="nav-link" href="workshop.php">Workshops</a></li>
                     <!--<li class="nav-item"><a class="nav-link" href="#contact">Tariffe</a></li>-->
                         <li class="nav-item"><a class="nav-link" href="prenota.php">Prenota</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.php"> <?php echo(isset($login_session) ? $login_username : "Login")  ?></a></li>
                     </ul>
                     <form class="d-flex">
-
-
-
-                    <button class="btn btn-outline-light btn-responsive d-none d-md-block ms-4" type="submit">
-                        <i class="bi-cart-fill me-1 text-white"></i>
-                        <span class="text-white">Cart</span>
-                        <span class="badge bg-white text-dark ms-1 rounded-pill">0</span>
-                    </button>
-                    <!-- quando è collassato -->
-                    <button class="btn btn-outline-dark btn-responsive d-block d-md-none " type="submit">
-                        <i class="bi-cart-fill me-1 "></i>
-                        <span class="text- white">Cart</span>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
-
-
-
-                        <!--
-                        <button class="btn btn-outline-light btn-responsive d-none d-md-block mx-4" type="submit">
-                            <i class="bi-cart-fill me-1 text-white" ></i>
-                            <span class = "text-white" >Cart</span>
-                            <span class="badge bg-white text-dark ms-1 rounded-pill">0</span>
+                        <button class="btn btn-outline-translucent nav-link btn-responsive d-none d-md-block ms-4" type="submit">
+                            <i class="bi-cart-fill me-1 text-dark"></i>
+                            <span class="text-dark">Cart</span>
+                            <!--<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>-->
                         </button>
-                        -->
-
-
-
+                            <!-- quando è collassato -->
+                            <button class="btn btn-outline-dark btn-responsive d-block d-md-none " type="submit">
+                            <i class="bi-cart-fill me-1 "></i>
+                            <span class="text- white">Cart</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -60,7 +44,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <!--<p class="text-white-75 mb-5">Scopri chi siamo</p>-->
-                        <a class="btn btn-primary btn-xl" href="login.php">Sign in/Sign up</a>
+                        <a class="btn btn-primary btn-xl" href="login.php#login_section"><?php echo(isset($login_session) ? "Welcome " . $login_username : "Sign in/Sign up")  ?></a>
                     </div>
                 </div>
             </div>
