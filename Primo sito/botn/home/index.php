@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>PNL - Sale</title>
+        <title>Creative - Start Bootstrap Theme</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -19,110 +22,136 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sale.php">Sale</a></li>
-                        <li class="nav-item"><a class="nav-link" href="workshop.php">Workshops</a></li>
-                    <!--<li class="nav-item"><a class="nav-link" href="#contact">Tariffe</a></li>-->
-                        <li class="nav-item"><a class="nav-link" href="prenota.php">Prenota</a></li>
-                        <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+        
         <!-- Masthead-->
         <header class="masthead">
             <div class="container px-4 px-lg-5 h-100">
-                <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-8 align-self-end">
-                        <h6 class="text-white font-weight-bold piccolo">PNL Studio</h6>
-                        <h1 class="text-white font-weight-bold grande">Sale</h1>
-                        <hr class="divider" />
+                <h5 class="titolo"><span class="w3-tag w3-wide">LO STUDIO</span></h5>
+                <p>Questo studio nasce dalla passione che tutti e 3 abbiamo per la musica .... è il luogo in cui ci sentiamo più a casa. </p>
+                <p>è composto da [tot] stanze di registrazione, [tot] boots per registrare,[tot] stanze dedicate al Mix&MAster/all'ascolto, [tot] stanza Dolby Atmos e 2 aule di medie dimensioni dedicate allo svolgimento di attività e corsi.</p>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <p><i>"Non è mai troppo tardi per diventare ciò che avresti potuto essere."</i></p>
+                <p>George Elliot (Mary Ann Evans)</p>
+            </div>
+            <div class="w3-panel w3-leftbar w3-light-grey">
+                <p><i>"Ogni grande impresa inizia con un sogno, e ogni sogno con un passo avanti."</i></p>
+                    <p>Anonimo</p>
+             </div>
+  
+            <img src="https://www.progettazione-studi-di-registrazione.it/sites/default/files/113%20progetto-sala-registrazione-milano-GIGI-BAROCCO-STUDIO-104_0.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+   
+            </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="page-section bg-primary" id="about">
+            
+        </section>
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">At Your Service</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Sturdy Themes</h3>
+                            <p class="text-muted mb-0">Our themes are updated regularly to keep them bug free!</p>
+                        </div>
                     </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5">Esplora le nostre Sale, se ce n'è una che ti ispira puoi prenotarla!</p>
-                        <a class="btn btn-primary btn-xl" href="prenota.php">Prenota</a>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Up to Date</h3>
+                            <p class="text-muted mb-0">All dependencies are kept current to keep things fresh.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Ready to Publish</h3>
+                            <p class="text-muted mb-0">You can use this design as is, or you can make changes!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-center">
+                        <div class="mt-5">
+                            <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
+                            <h3 class="h4 mb-2">Made with Love</h3>
+                            <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-
+        </section>
         <!-- Portfolio-->
         <div id="portfolio">
             <div class="container-fluid p-0">
                 <div class="row g-0">
-    
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Studio A">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Sala prove</div>
-                                <div class="project-name">Altiora</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Studio B">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Sala prove</div>
-                                <div class="project-name">Armonia</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Studio C">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Studio di registrazione</div>
-                                <div class="project-name">Lumen</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Studio D">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Studio di registrazione</div>
-                                <div class="project-name">Arcadia</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Studio E">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
-                            <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Studio di registrazione</div>
-                                <div class="project-name">Perseide</div>
-                            </div>
-                        </a>
-                    </div>
                     <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/1.jpg" title="Project Name">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/1.jpg" alt="..." />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Studio di registrazione</div>
-                                <div class="project-name">Aeternum</div>
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/2.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/2.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="..." />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg" title="Project Name">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="..." />
+                            <div class="portfolio-box-caption p-3">
+                                <div class="project-category text-white-50">Category</div>
+                                <div class="project-name">Project Name</div>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-       
+        <!-- Call to action-->
+        <section class="page-section bg-dark text-white">
+            <div class="container px-4 px-lg-5 text-center">
+                <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
+                <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
+            </div>
+        </section>
         <!-- Contact-->
         <section class="page-section" id="contact">
             <div class="container px-4 px-lg-5">
