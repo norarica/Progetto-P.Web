@@ -1,4 +1,7 @@
-<?php $IPATH = $_SERVER["DOCUMENT_ROOT"]."/assets/php/"; ?>
+<?php 
+  $IPATH = "assets/php/";
+  include($IPATH.'session.php');
+?>
 
 
 <!DOCTYPE html>
@@ -17,29 +20,26 @@
   <?php include($IPATH."navbar.html"); ?>
 
 
-
 <!--Menu container--> 
-<div class="w3-container" id="menu">
-  <div class="w3-content" style="max-width:700px" id="morePadding-section">
+<div class="w3-container">
+  <div class="w3-content">
  
     <h5 class="titolo"><span class="w3-tag w3-wide">LE NOSTRE SALE</span></h5>
   
+    <!--ATTENZIONE: se voglio rimettere le 3 colonne in tutti devo scrivere s4 invece che s6 -->
     <div class="w3-row w3-center w3-card">
       <a href="javascript:void(0)" onclick="openMenu(event, 'SReg');" id="myLink">
-        <div class="w3-col s4 tablink">Registrazione</div>
-      </a>
-      <a href="javascript:void(0)" onclick="openMenu(event, 'SMM');">
-        <div class="w3-col s4 tablink">Mix&Master</div>
+        <div class="w3-col s6 tablink">Registrazione</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'SProve');">
-        <div class="w3-col s4 tablink">Prove</div>
+        <div class="w3-col s6 tablink">Prove</div>
       </a>
     </div>
-
+    
 <!--elementi cliccabili-->
+<!--Registrazione container--> 
 <div id="SReg" class="w3-container menu w3-card">
   <div class="non-clickable">
-    <!--<h5>Tariffe</h5>-->
     <p class="w3-text-black"><u>Tariffe</u><br>Dal lunedì al venerdì: <br>• 40euro l'ora<br>• 260euro giornaliero (8h) <br> Sabato e festivi: <br>• 45euro l'ora<br>• 320 giornaliero (8h)</p>
   </div>
   <div class="menu-item">
@@ -78,63 +78,7 @@
   </div>
 </div>
 
-<div id="SMM" class="w3-container menu w3-card">
-  <div class="non-clickable">
-    <p class="w3-text-black"><u>Tariffe</u><br>Dal lunedì al venerdì: <br>• 45euro l'ora<br>• 320euro giornaliero (8h) <br> Sabato e festivi: <br>• 50euro l'ora<br>• 350 giornaliero (8h)</p>
-  </div>
-  <div class="menu-item">
-    <a href="coffee.html">
-      <h5>Coffee</h5>
-      <p class="w3-text-grey">Regular coffee 2.50</p>
-    </a>
-  </div>
-  
-  <div class="menu-item">
-    <a href="chocolato.html">
-      <h5>Chocolato</h5>
-      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p>
-    </a>
-  </div>
-  
-  <div class="menu-item">
-    <a href="corretto.html">
-      <h5>Corretto</h5>
-      <p class="w3-text-grey">Whiskey and coffee 5.00</p>
-    </a>
-  </div>
-  
-  <div class="menu-item">
-    <a href="icedtea.html">
-      <h5>Iced tea</h5>
-      <p class="w3-text-grey">Hot tea, except not hot 3.00</p>
-    </a>
-  </div>
-  
-  <div class="menu-item">
-    <a href="soda.html">
-      <h5>Soda</h5>
-      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
-    </a>
-  </div>
-</div>
-
-<!--eventuale carnet/abbonamento con sconto x cumulazione
-utente premium -> che utilizza tanto il servizio 
-               -> che paga un abbonamento
-vantaggi: non paghi l'assistenza dei tecnici
-          (sconti?)
-          carnets più vantaggiosi
-          sconti sui corsi/attività
-Mix&master anche affitto stanza? o solo servizio procurato dallo studio?
-come differenziare le tariffe?
-PAGINA tariffe 
-- affitto stanze (registrazione/mix&master/prove) + presenza dell'omino
-- visite/attività (il proprietario dello studio deve poter aggiungere e rimuovere i volantini a seconda)
-- corsi (il prpt. deve poter aggiungere e rimuovere i volantini a seconda)
-- Mix&master fatto da noi
-
--->
-
+<!--Sala Prove container--> 
 <div id="SProve" class="w3-container menu w3-card">
   <div class="non-clickable">
     <p class="w3-text-black"><u>Tariffe</u><br>Dal lunedì al venerdì:<br>• 13euro l'ora (fino alle 20h30)<br>• 16euro l'ora (dopo le 20h30)  <br> Sabato e festivi: <br>• 16euro l'ora (fino alle 20h30) <br>• 20euro l'ora (dopo le 20h30)</p>
@@ -153,7 +97,7 @@ PAGINA tariffe
 </div>
 
 
-<footer class="w3-center w3-large" style="background-color: #e6ccb3; padding-top: 1px; padding-bottom: 1px;">
+<footer class="w3-center w3-large footer">
   <p>Contatti:</p>
   <p><strong>Email:</strong> info@pnlstudio.com <br>
   <strong>Telefono:</strong> +39 02 1234567</p>
